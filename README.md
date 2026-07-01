@@ -50,3 +50,12 @@ df.rename(columns={'Customer_Message': 'ticket_text', 'Issue_Type': 'category', 
 - The confusion matrix was output as an image: `confusion_matrix_category.png`.
 
 > **Performance Edge:** As you transition to the real IT Ticket datasets (which contain much messier real-world slang), consider swapping out `RandomForest` for a `LinearSVC` algorithm (Support Vector Classifier), as it often demonstrates superior accuracy in high-dimensional TF-IDF NLP spaces!
+
+<div align="center">
+
+### Built with ❤️ by [Gous Khan](mailto:gousk2004@gmail.com)
+
+
+⭐ If you find this project valuable, please consider giving it a star! ⭐
+
+</div>
