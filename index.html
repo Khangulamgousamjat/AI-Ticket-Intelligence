@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support Ticket Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <main class="glass-panel">
+        <header>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>AI Ticket Intelligence</h1>
+            </div>
+            <p>Automatically classify and prioritize your support queue</p>
+        </header>
+
+        <section class="input-section">
+            <label for="ticket-text">Customer Ticket</label>
+            <div class="textarea-wrapper">
+                <textarea id="ticket-text" placeholder="Type or paste the customer's support request here... (e.g. 'My credit card payment was declined, fix this ASAP!')"></textarea>
+                <div class="glow-border"></div>
+            </div>
+            <button id="analyze-btn" class="primary-btn">
+                <span class="btn-text">Analyze Ticket</span>
+                <div class="spinner-hidden" id="spinner"></div>
+            </button>
+        </section>
+
+        <section class="results-section hidden" id="results">
+            <h2>Prediction Results</h2>
+            <div class="result-cards">
+                <div class="card glass-card">
+                    <span class="card-label">Category</span>
+                    <h3 id="category-result">--</h3>
+                </div>
+                <div class="card glass-card">
+                    <span class="card-label">Priority Level</span>
+                    <div class="priority-badge" id="priority-result-badge">
+                        <h3 id="priority-result">--</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="error-msg hidden" id="error-msg"></div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
